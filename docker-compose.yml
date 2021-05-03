@@ -1,0 +1,23 @@
+version: "3.8" # Docker Composeファイルのバージョン指定
+services: # サービス名
+    app: # アプリケーションサーバ
+        build: ./infra/php # ビルドを実行する作業ディレクトリ
+        volumes: # コンテナ側へマウントしたいときに指定
+            - ./backend:/work
+
+    web:
+        image: nginx:1.18-alpine
+        ports:
+            - 10080:80
+        volumes:
+            - ./backend:/work
+            - ./infra/nginx/default.conf:/etc/nginx/conf.d/default.conf
+        working_dir: /work
+
+    db:
+        build: ./infra/mysql
+        volumes:
+            - db-store:/var/lib/mysql
+
+volumes:
+    db-store:
