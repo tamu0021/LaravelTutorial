@@ -27,6 +27,12 @@ Route::get('/folders/{id}/tasks/create', 'TaskController@showCreateForm')->name(
 /* タスク作成処理実行 */
 Route::post('/folders/{id}/tasks/create', 'TaskController@create');
 
+/* タスクを編集する */
+/* タスク編集ページを表示 */
+Route::get('/folders/{id}/tasks/{task_id}/edit', 'TaskController@showEditForm')->name('tasks.edit');
+/* タスク編集処理実行 */
+Route::post('/folders/{id}/tasks/{task_id}/edit', 'TaskController@edit');
+
 Route::get('/', function () {
     return view('welcome');
 });
