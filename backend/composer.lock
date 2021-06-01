@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ddeabc1ce42c24615f2fd0343a6ea0f2",
+    "content-hash": "504d700da5fc102f2ee94e47e6a36273",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1088,6 +1088,9 @@
                 "laravel",
                 "ui"
             ],
+            "support": {
+                "source": "https://github.com/laravel/ui/tree/v3.2.1"
+            },
             "time": "2021-04-27T18:17:41+00:00"
         },
         {
@@ -7003,5 +7006,5 @@
         "php": "^7.3|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }
